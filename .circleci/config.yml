@@ -1,9 +1,9 @@
 version: 2.1 
 
 orbs:
-  aws-ecr: circleci/aws-ecr@x.y.z # Use the AWS ECR orb in your config
-  aws-ecs: circleci/aws-ecs@x.y.z # Use the AWS ECS orb in your config
-
+  aws-ecr: circleci/aws-ecr@6.2.0
+  aws-ecs: circleci/aws-ecs@0.0.11
+  
 workflows:
   build-and-deploy:
     jobs:
