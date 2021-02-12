@@ -9,7 +9,7 @@ workflows:
     jobs:
       - aws-ecr/build-and-push-image:
           dockerfile: Dockerfile
-          path: /home/circleci/project/Dockerfile
+          path: ./Dockerfile
           repo: test-deploy
           tag: latest
       - aws-ecs/deploy-service-update:
