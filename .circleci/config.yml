@@ -9,8 +9,8 @@ workflows:
     jobs:
       - aws-ecr/build-and-push-image:
           dockerfile: Dockerfile
-          path: Dockerfile
-          repo: $AWS_ECR_ACCOUNT_URL
+          path: /home/circleci/project/Dockerfile
+          repo: test-deploy
           tag: latest
       - aws-ecs/deploy-service-update:
           requires:
