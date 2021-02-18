@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-RUN apt update && apt install httpd -y
+FROM centos:latest
+RUN yum -y update && yum install httpd -y
 RUN echo "Welcome to world.......  Hari" >> /var/www/html/index.html
 WORKDIR /hari
 COPY . /hari/.
