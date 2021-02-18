@@ -5,7 +5,7 @@
 	"taskRoleArn": "${exec_role_arn}",
 	"containerDefinitions": [{
 		"image": "${ecr_arn}:latest",
-		"name": "webapp",
+		"name": "${container_name}",
 		"portMappings": [{
           "containerPort": 8888,
 		  "hostPort": 8888
