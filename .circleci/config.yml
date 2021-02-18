@@ -4,9 +4,6 @@ orbs:
   aws-ecs: circleci/aws-ecs@0.0.11
 jobs:
   build:
-    executor:
-      name: docker # executor type
-      size: "medium" 
     steps:
       - checkout
       - setup_remote_docker:
