@@ -7,8 +7,8 @@
 		"image": "556789283657.dkr.ecr.ap-southeast-1.amazonaws.com/hari:latest",
 		"name": "webapp",
 		"portMappings": [{
-                  "containerPort": 8888,
-		  "hostPort": 8888
+                  "containerPort": 8080,
+		  "hostPort": 8080
 			}
 		],
 		"logConfiguration": {
