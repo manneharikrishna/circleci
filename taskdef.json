@@ -5,7 +5,7 @@
 	"taskRoleArn": "arn:aws:iam::556789283657:role/ecsTaskExecutionRole",
 	"containerDefinitions": [{
 		"image": "556789283657.dkr.ecr.ap-southeast-1.amazonaws.com/hari:latest",
-		"name": "apache",
+		"name": "webapp",
 		"portMappings": [{
                   "containerPort": 8888,
 		  "hostPort": 8888
