@@ -1,8 +1,6 @@
-FROM python:3.6
+FROM tomcat:8.0-alpine
+ADD sample.war /usr/local/tomcat/webapps/
 WORKDIR /hari
 COPY . /hari/.
-RUN pip install -r requirements.txt
-CMD [ "python", "server.py" ]
+CMD ["catalina.sh", "run"]
 EXPOSE 8888
-RUN chmod +x /hari/entrypoint.sh
-ENTRYPOINT ["/hari/entrypoint.sh"]
