@@ -1,11 +1,11 @@
 {
-  "family": "${taskdef}",
+  "family": "task-def",
 	"networkMode": "awsvpc",
-	"executionRoleArn": "${exec_role_arn}",
-	"taskRoleArn": "${exec_role_arn}",
+	"executionRoleArn": "arn:aws:iam::556789283657:role/ecsTaskExecutionRole",
+	"taskRoleArn": "arn:aws:iam::556789283657:role/ecsTaskExecutionRole",
 	"containerDefinitions": [{
-		"image": "${ecr_arn}:latest",
-		"name": "${container_name}",
+		"image": "556789283657.dkr.ecr.ap-southeast-1.amazonaws.com/hari:latest",
+		"name": "apache",
 		"portMappings": [{
                   "containerPort": 8888,
 		  "hostPort": 8888
@@ -14,8 +14,8 @@
 		"logConfiguration": {
 			"logDriver": "awslogs",
 			"options": {
-              "awslogs-group": "/ecs/${taskdef}",
-				"awslogs-region": "${region}",
+              "awslogs-group": "/ecs/task-def",
+				"awslogs-region": "ap-southeast-1",
 				"awslogs-stream-prefix": "ecs"
 			}
 		}
